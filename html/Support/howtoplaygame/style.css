@@ -1,0 +1,132 @@
+body{
+		width: 100%;
+		font-family: Arial;
+		font-size: 14px;
+		line-height: 1.5;
+		font-weight: 400;
+		color: #5D85A1;
+		background-image: url(../Images/background.png);
+		background-size: 130%;
+		overflow-x: hidden; 
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+}
+
+#wrapper{
+	width: 90%;
+	max-width:1200px;
+	margin: 0 auto;
+}
+
+
+header{	
+	background-image: url(../Images/newlogo.png);
+	margin: 25px 0;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	background-size: 70%;
+	background-position: center;
+	background-repeat: no-repeat;	
+}
+
+@keyframes slider{
+}
+aside{
+	float: left;
+	width: 25%;
+	margin-bottom: 25px;
+}
+.buttons{
+	color:#d4edff;
+	background-color: #2c74a8;
+	border-radius: 25px;
+	padding: 10px;
+	/*padding-bottom: 43px;*/
+}
+aside nav ul{
+	list-style-type: none;
+	padding: 2px;
+}
+aside nav ul li{
+	margin-bottom: 3px;
+}
+aside nav ul li a{
+	display: block;
+	text-decoration: none;
+	color:#d4edff;
+	background-color:#5c85ff;
+	padding: 8px 20px;
+	border-style: solid;
+  border-width: 2px;
+  border-color: #5c5cff;
+	border-radius: 5px;
+}
+aside nav ul li a:hover{
+	color: #fff;
+	background-color:#b6c8ff;
+}
+article{
+	float: right;
+	width: 70%;
+	margin-bottom: 25px;
+	color:#d4edff;
+	background-color: #2c74a8;
+	border-radius: 25px;
+	padding: 10px;
+	padding-bottom: 41px;
+}
+.textinp{
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+footer{
+	clear: both;
+	background-color: #5D85A1;
+	color: white;
+	padding: 10px;
+	border-radius: 12px;
+}
+@media (min-width: 1250px){
+	#wrapper{
+	width: 1200px;
+}
+aside{width: 25%;}
+article{width: 72%;}
+}
+@media (min-width: 1000px) and (max-width: 1250px){
+	#wrapper{width: 900px;}
+	aside{width: 25%;}
+	article{width: 72%;}
+}
+@media (min-width: 800px) and (max-width: 1000px){
+		#wrapper{
+	width: 750px;
+}
+aside{width: 25%;}
+article{width: 72%;}
+}
+@media (min-width: 500px) and (max-width: 800px){
+		#wrapper{
+	width: 450px;
+}	
+aside, article{width:100%;}
+}
+@media (max-width: 500px){
+	#wrapper{width:90%;}
+	aside, article{width:100%;}
+}
+.disabled{
+	pointer-events: none;
+	cursor: default;
+	background-color:#3f5cb4;
+}
+.demoimage{
+    width: 350px;
+    height: auto;
+}
+.demoimagehint{
+    width: 450px;
+    height: auto;
+}
