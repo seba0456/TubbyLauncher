@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    color: #fff3e0;
+    background: #222614;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.b {
+list-style-type: square;
+padding-left: 60px;
+}
+.game-update {
+    background: #565939;
+    padding: 1em;
+    margin-bottom: 1em;
+    border-radius: 15px;
+    width: 570px;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3 {
+    margin-top: 0;
+    font-size: 1.6em;
+    color: #9e9f72;
+}
+img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 5px;
+}
+/* width */
+::-webkit-scrollbar {
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #727351; 
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #b1b17c; 
+}
+.images { overflow: hidden; width: 100%;
+
+padding-left: 6px;
+padding-right: 6px; 
+}
+
+.images img { float: left;  padding: 10px 0;}
