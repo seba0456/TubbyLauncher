@@ -1,0 +1,96 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationIcon>launcherlogo.ico</ApplicationIcon>
+    <PackageId>Slendertubbies Launcher</PackageId>
+    <Version>1.2.3</Version>
+    <Authors>Sebastian Legieziński</Authors>
+    <Product>Slendertubbies Launcher</Product>
+    <Description>Program that launches Slendertubbies game</Description>
+    <PackageProjectUrl>https://seba0456.itch.io/slendertubbies</PackageProjectUrl>
+    <StartupObject>TubbyLauncher.App</StartupObject>
+    <Platforms>AnyCPU;x64</Platforms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="backdrop.png" />
+    <None Remove="discord_button.png" />
+    <None Remove="Images\SettingsIcon.png" />
+    <None Remove="Images\SliderBackground.png" />
+    <None Remove="newlogo.png" />
+    <None Remove="NewsWindowBackdrop.png" />
+    <None Remove="Play button.png" />
+    <None Remove="Sounds\Click_01.WAV" />
+    <None Remove="Sounds\Click_02.WAV" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="Properties\Dictionary1.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="launcherlogo.ico" />
+    <Content Include="Sounds\Click_01.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1245.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\backdrop.png" />
+    <Resource Include="Images\discord_button.png" />
+    <Resource Include="Images\newlogo.png" />
+    <Resource Include="Images\NewsWindowBackdrop.png" />
+    <Resource Include="Images\Play button.png" />
+    <Resource Include="Images\SettingsIcon.png" />
+    <Resource Include="Images\SliderBackground.png" />
+    <Resource Include="Sounds\Click_02.WAV">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="LauncherSettings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LauncherSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Resource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LauncherSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>LauncherSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

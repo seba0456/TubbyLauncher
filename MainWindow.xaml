@@ -1,0 +1,121 @@
+﻿<Window x:Name="TubbyLauncher" x:Class="TubbyLauncher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TubbyLauncher"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Slendertubbies launcher" Height="650" Width="1050.3" ResizeMode="CanMinimize" Background="#FF2B333D" UseLayoutRounding="True" AllowDrop="True" Focusable="False">
+
+    <Grid>
+
+        <Grid.Background>
+            <ImageBrush ImageSource="Images/backdrop.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="204*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="105*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="GameVersionLabel" Content="Game version&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,160,0,0" VerticalAlignment="Bottom" FontSize="16" FontFamily="Gadugi" Height="40" Width="270" Foreground="#FFA9B3BC" Grid.Row="3"/>
+        <Label x:Name="VersionStat" Content="Launcher version 1.2.3" HorizontalAlignment="Left" Margin="10,136,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Gadugi" Height="40" Width="270" Foreground="#FFA9B3BC" Grid.Row="3"/>
+        <Image Margin="145,61,145,204" Grid.RowSpan="2" Source="Images/newlogo.png" Stretch="Fill"/>
+        <Button  Height="60" HorizontalAlignment="Left" Margin="369,270,0,0" x:Name="GameLaunch1" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Stretch" Grid.RowSpan="2" Background="#FF5D88DB" BorderBrush="#FF7356E8" Click="LaunchButton_Click">
+            <TextBlock x:Name="GameLaunch" TextAlignment="Center" FontSize="32" Background="#FF5D88DB" Height="50" Margin="2,0,2,0" Foreground="Black" ><Run Language="pl-pl" Text="Play" Foreground="#FFF9F9F9"/><LineBreak/><Run Language="pl-pl"/></TextBlock>
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Launch the game!</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button >
+        <Button  Height="60" HorizontalAlignment="Left" Margin="525,270,0,0" x:Name="WebsiteLaunchButton" VerticalAlignment="Top" Width="150" HorizontalContentAlignment="Stretch" Background="#FF5D88DB" BorderBrush="#FF7356E8" Grid.Row="1" Click="WebsiteLaunchButton_Click">
+            <TextBlock x:Name="Website" TextAlignment="Center" FontSize="32" Background="#FF5D88DB" Height="50" Margin="2,0,2,0" Foreground="Black" ><Run Foreground="#FFF9F9F9" Language="pl-pl" Text="Itch.io"/><LineBreak/><Run/></TextBlock>
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Open official ST website</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button  Height="43" HorizontalAlignment="Left" Margin="979,153,0,0" x:Name="DiscordLaunch" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Stretch" Background="#FF5D88DB" BorderBrush="#FF7356E8" Grid.Row="3" Click="DiscordLaunch_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Image Height="26" Margin="3,0,3,0" Source="Images/discord_button.png" Stretch="Fill" Width="26"/>
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Open Slendertubbies Discord server!</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+        </Button>
+        <Button  Height="43" HorizontalAlignment="Left" Margin="979,105,0,0" x:Name="SettingsLaunch" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Stretch" Background="#FF5D88DB" BorderBrush="#FF7356E8" Grid.Row="3" Click="SettingsLaunch_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Image Height="26" Margin="3,0,3,0" Source="/Images/SettingsIcon.png" Stretch="Fill" Width="26"/>
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Open Launcher settings window!</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+        </Button>
+        <Button  Height="43" HorizontalAlignment="Left" Margin="924,153,0,0" x:Name="ShowIP" VerticalAlignment="Top" Width="50" HorizontalContentAlignment="Stretch" Background="#FF5D88DB" BorderBrush="#FF7356E8" Grid.Row="3" Click="ShowIP_Click">
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold">Get local IP address</TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <TextBlock x:Name="IPText" TextWrapping="Wrap" Text="IP" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="-0.594,0.5" Padding="10,0,0,0" FontSize="24" Width="36" Margin="3,0,0,0" Foreground="White" FontWeight="Bold" FontFamily="Averia Gruesa"/>
+        </Button>
+        <Button  Height="43" HorizontalAlignment="Left" Margin="802,153,0,0" x:Name="ShowNews" VerticalAlignment="Top" Width="117" HorizontalContentAlignment="Stretch" Background="#FF5D88DB" BorderBrush="#FF7356E8" Grid.Row="3" Click="ShowNewsWindow">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold"><Run Text="Open news window"/></TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+            <TextBlock x:Name="IPText1" TextWrapping="Wrap" RenderTransformOrigin="-0.594,0.5" Padding="10,0,0,0" FontSize="24" Foreground="White" FontWeight="Bold" FontFamily="Averia Gruesa" HorizontalAlignment="Right" VerticalAlignment="Center" Height="30" Margin="0,0,26,0"><Run Language="pl-pl" Text="News"/><LineBreak/><Run Language="pl-pl"/></TextBlock>
+        </Button>
+        <Button  Height="43" HorizontalAlignment="Left" Margin="680,153,0,0" x:Name="ShowSupport" VerticalAlignment="Top" Width="117" HorizontalContentAlignment="Stretch" Background="#FF5D88DB" BorderBrush="#FF7356E8" Grid.Row="3" Click="ShowSupportWindow">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+            <Button.ToolTip>
+                <StackPanel>
+                    <TextBlock FontWeight="Bold"><Run Text="Open help window"/></TextBlock>
+                </StackPanel>
+            </Button.ToolTip>
+            <TextBlock x:Name="IPText2" TextWrapping="Wrap" RenderTransformOrigin="-0.594,0.5" Padding="10,0,0,0" FontSize="24" Foreground="White" FontWeight="Bold" FontFamily="Averia Gruesa" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Margin="23,0,0,0"><Run Language="pl-pl" Text="Help"/><LineBreak/><Run Language="pl-pl"/></TextBlock>
+        </Button>
+    </Grid>
+</Window>
